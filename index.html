@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Mural de Publicações</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container">
+      <p class="etiqueta">API E FETCH</p>
+      <h1>Meu Mural de Publicações</h1>
+      <p>Um mural simples que busca publicações em uma API pública.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="painel" aria-label="Controles do mural">
+      <div class="topo-painel">
+        <div>
+          <h2>Publicações</h2>
+          <p class="descricao">Carregue os dados e filtre pelo título.</p>
+        </div>
+        <span id="contador" class="contador">0 publicações</span>
+      </div>
+
+      <div class="controles">
+        <input
+          id="filtro"
+          type="search"
+          placeholder="Filtrar pelo título..."
+          aria-label="Filtrar publicações pelo título"
+        >
+        <button id="btn-carregar" type="button">Carregar publicações</button>
+      </div>
+
+      <p id="mensagem" role="status" aria-live="polite">Clique em “Carregar publicações” para começar.</p>
+    </section>
+
+    <section id="lista-posts" class="lista-posts" aria-label="Publicações"></section>
+  </main>
+
+  <footer class="rodape">
+    <p>Atividade de APIs, Fetch e JavaScript puro.</p>
+  </footer>
+</body>
+</html>
